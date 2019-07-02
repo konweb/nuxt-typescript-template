@@ -1,0 +1,12 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "data": {
+        {
+          "id": 1, "name": "json-server", "author": "typicode"
+        }
+      }
+    }
+  ]
+}
