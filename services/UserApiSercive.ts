@@ -1,4 +1,4 @@
-import { client as httpClient, endpoints } from '../common/api'
+import { client as httpClient, endpoints } from './client'
 
 // import models
 import {
