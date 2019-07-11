@@ -14,7 +14,7 @@ import { Status } from '~/models/common/Status'
 import { User } from '~/models/users/Users'
 
 import Counter from '~/components/Counter.vue'
-import UserApiSercive from '~/services/UserApiSercive'
+import UserApiSercive from '~/api/UserApiSercive'
 
 interface HttpUser {
   status: Status
