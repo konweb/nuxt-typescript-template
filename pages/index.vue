@@ -10,8 +10,8 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 
-import { Status } from '~/models/common/Status'
-import { User } from '~/models/users/Users'
+import { Status } from '~/types/common/Status'
+import { User } from '~/types/users/Users'
 
 import Counter from '~/components/Counter.vue'
 import UserApiSercive from '~/api/UserApiSercive'
