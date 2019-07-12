@@ -1,4 +1,5 @@
-import { client as httpClient, endpoints } from '~/api/client'
+import { client as httpClient } from '~/api/client'
+import endpoints from '~/api/endpoints'
 
 // import types
 import {
