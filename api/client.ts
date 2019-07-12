@@ -35,3 +35,7 @@ export const request = (options: AxiosRequestConfig) => {
       return Promise.reject(new Error('Request Failed'))
     })
 }
+
+export default ({ app }, inject) => {
+  inject('client', client)
+}

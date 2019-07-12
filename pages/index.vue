@@ -14,7 +14,6 @@ import { Status } from '~/types/common/Status'
 import { User } from '~/types/users/Users'
 
 import Counter from '~/components/Counter.vue'
-import { getUser } from '~/api/user'
 
 interface HttpUser {
   status: Status
@@ -27,8 +26,8 @@ interface HttpUser {
   }
 })
 export default class App extends Vue {
-  async asyncData({ error }) {
-    const resp = await getUser(1).catch(() => {
+  async asyncData({ error, app }) {
+    const resp = await app.$userApi.get(1).catch(() => {
       error({ statusCode: 404, message: 'ページが見つかりません' })
     })
     return { httpUser: { status: 'stable', user: resp } }
