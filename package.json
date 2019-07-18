@@ -42,6 +42,7 @@
     "eslint-plugin-vue": "^5.2.2",
     "json-server": "^0.15.0",
     "nodemon": "^1.18.9",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "vuex-module-decorators": "^0.9.9"
   }
 }
