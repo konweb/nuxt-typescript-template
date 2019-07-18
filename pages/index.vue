@@ -9,11 +9,16 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import { namespace } from 'vuex-class'
 
 import { Status } from '~/types/common/Status'
 import { User } from '~/types/users/Users'
 
 import Counter from '~/components/Counter.vue'
+
+import { name as userModuleName } from '~/store/modules/user'
+
+const UserModule = namespace(userModuleName)
 
 interface HttpUser {
   status: Status
@@ -26,6 +31,9 @@ interface HttpUser {
   }
 })
 export default class App extends Vue {
+  @UserModule.Getter('name') getterName
+  @UserModule.Action('setName') actionSetName
+
   async asyncData({ error, app }) {
     const resp = await app.$userApi.get(1).catch(() => {
       error({ statusCode: 404, message: 'ページが見つかりません' })
@@ -34,6 +42,12 @@ export default class App extends Vue {
   }
 
   text = 'Hello'
+
+  created() {
+    this.actionSetName('tom').then(() => {
+      console.log(this.getterName)
+    })
+  }
 }
 </script>
 
