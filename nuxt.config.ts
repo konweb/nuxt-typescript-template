@@ -36,7 +36,7 @@ const config: NuxtConfiguration = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/api/user'],
   /*
    ** Nuxt.js modules
    */
